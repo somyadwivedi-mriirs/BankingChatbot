@@ -1,3 +1,6 @@
+# Credits: 
+Followed the below project-<br/>
+https://github.com/RasaHQ/financial-demo
 
 # Financial Services Example Bot
 
