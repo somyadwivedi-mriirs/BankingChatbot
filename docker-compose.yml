@@ -1,0 +1,26 @@
+version: "3"
+services:
+    rasa_actions:
+        build: ./actions
+        ports:
+            - "5055:5055"
+        container_name: rasa_action
+    rasa_nlu:
+        build: ./models
+        container_name: rasa_nlu
+        command:
+            - run
+            - --enable-api
+            - --cors
+            - "*"
+        ports:
+            - "5005:5005"
+    rasa_ui:
+        build: ./UI
+        container_name: rasa_ui
+        ports:
+            - "8004:8004"
+    duckling:
+        image: rasa/duckling
+        ports:
+            - "8000:8000"

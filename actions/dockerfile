@@ -1,0 +1,6 @@
+FROM rasa/rasa:1.10.11
+
+WORKDIR app/
+COPY . ./actions
+
+CMD ["run", "actions"]

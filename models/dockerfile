@@ -1,0 +1,5 @@
+FROM rasa/rasa:1.10.11-spacy-en
+
+WORKDIR app/
+COPY endpoints.yml .
+COPY . ./models
